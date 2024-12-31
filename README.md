@@ -8,12 +8,14 @@ This is a combination of 2 homework questions -
 
 The terrain was created using a height map generated from the Ariel's topology.
 
-Site: https://manticorp.github.io/unrealheightmap/#latitude/32.104825065499654/longitu...
+Site: [Height map gen](https://manticorp.github.io/unrealheightmap/#latitude/32.104825065499654/longitude/35.166893005371094/zoom/13/outputzoom/13/width/100/height/100)
 
 Controls:
 
 ​Movement - WASD
+
 Shoot - Left mouse button
+
 Restock Ammo - E
 
 ​Enemies will spawn every so often and when you shoots them his score will go up. When out of bullets you can restock in the stone house near the spawn.​​
