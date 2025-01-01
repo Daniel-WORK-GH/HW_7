@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.S)) forward -= 1;
         if (Input.GetKey(KeyCode.A)) sideways -= 1;
         if (Input.GetKey(KeyCode.D)) sideways += 1;
-    
+
         running = Input.GetKey(KeyCode.LeftShift);
 
         // Calculate movement direction relative to the player
