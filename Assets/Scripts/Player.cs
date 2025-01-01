@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     public TMP_Text bulletText;
 
     // Interaction
-    public float interactionRange = 2.0f; 
+    public float interactionRange = 2.0f;
 
     void Start()
     {
@@ -62,10 +62,10 @@ public class Player : MonoBehaviour
         float sideways = 0;
 
         // Get input
-        if(Input.GetKey(KeyCode.W)) forward += 1;
-        if(Input.GetKey(KeyCode.S)) forward -= 1;
-        if(Input.GetKey(KeyCode.A)) sideways -= 1;
-        if(Input.GetKey(KeyCode.D)) sideways += 1;
+        if (Input.GetKey(KeyCode.W)) forward += 1;
+        if (Input.GetKey(KeyCode.S)) forward -= 1;
+        if (Input.GetKey(KeyCode.A)) sideways -= 1;
+        if (Input.GetKey(KeyCode.D)) sideways += 1;
     
         running = Input.GetKey(KeyCode.LeftShift);
 
@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
         {
             Vector3 move = direction.normalized * moveSpeed * Time.deltaTime;
 
-            if(running)
+            if (running)
             {
                 move *= runningMultiplier;
             }
@@ -112,7 +112,7 @@ public class Player : MonoBehaviour
 
     void Shoot()
     {
-        if (Input.GetMouseButtonDown(0) && bullets > 0) 
+        if (Input.GetMouseButtonDown(0) && bullets > 0)
         {
             Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
             RaycastHit hit;
@@ -124,7 +124,7 @@ public class Player : MonoBehaviour
             {
                 Debug.Log("Hit: " + hit.collider.name);
 
-                if(hit.collider.tag == "Enemy")
+                if (hit.collider.tag == "Enemy")
                 {
                     Debug.Log("Killing enemy.");
                     Destroy(hit.collider.transform.gameObject);
@@ -186,10 +186,10 @@ public class Player : MonoBehaviour
             if (hit.collider.CompareTag("Box"))
             {
                 bullets += bulletReloadCount;
-                if(bullets > maxBullets) bullets = maxBullets;
+                if (bullets > maxBullets) bullets = maxBullets;
                 Debug.Log("Interacted with the box! Player HP set to 10.");
 
-                bulletText.text = $"Bullets: {bullets}";    
+                bulletText.text = $"Bullets: {bullets}";
             }
         }
         else
